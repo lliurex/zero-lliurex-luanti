@@ -1,2 +1,4 @@
-client/*     /usr/share/zero-lliurex-luanti
+client/zero-lliurex-luanti/*     /usr/share/zero-lliurex-luanti
+client/zero-lliurex-luanti.zmds/*app     /usr/share/zero-center/applications
+client/zero-lliurex-luanti.zmds/*zmd     /usr/share/zero-center/zmds
 common/*     /usr/share/zero-lliurex-luanti
