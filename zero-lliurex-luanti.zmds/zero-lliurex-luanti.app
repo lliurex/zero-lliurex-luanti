@@ -12,6 +12,5 @@ Icon=zero-lliurex-luanti
 Category=Software
 ScriptPath=zero-lliurex-luanti.zmd
 Using=pkexec
-Service=True
 Locks=zero-lliurex-luanti
-Groups=admin;admins;sudo;teachers
+Groups=admins;sudo;teachers
