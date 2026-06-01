@@ -1,0 +1,17 @@
+Name=zero-lliurex-luanti
+Name[es]=Instalador de Luanti
+Name[en]=Luanti installer
+Name[ca_ES]=Instal·lador de Luanti
+Name[ca@valencia]=Instal·lador de Luanti
+Name[qcv]=Instal·lador de Luanti
+Comment=An open source voxel game creation platform
+Comment[es]=Una plataforma de creación de juegos de vóxeles
+Comment[ca_Es]=Una plataforma de creació de jocs de vòxels
+Comment[ca@valencia]=Una plataforma de creació de jocs de vòxels
+Icon=zero-lliurex-luanti
+Category=Software
+ScriptPath=zero-lliurex-luanti.zmd
+Using=pkexec
+Service=True
+Locks=zero-lliurex-luanti
+Groups=admin;admins;sudo;teachers

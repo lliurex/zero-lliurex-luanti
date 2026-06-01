@@ -1,0 +1,17 @@
+Name=zero-lliurex-luanti-server
+Name[es]=Instalador del servidor de Luanti
+Name[en]=Luanti server installer
+Name[ca_ES]=Instal·lador del server de Luanti
+Name[ca@valencia]=Instal·lador del server de Luanti
+Name[qcv]=Instal·lador del server de Luanti
+Comment=Server for Luanti, an open source voxel game creation platform
+Comment[es]=Servidor para Luanti, una plataforma de creación de juegos de vóxeles
+Comment[ca_Es]=Servidor per Luanti, una plataforma de creació de jocs de vòxels
+Comment[ca@valencia]=Servidor per Luanti, una plataforma de creació de jocs de vòxels
+Icon=zero-lliurex-luanti-server
+Category=Software
+ScriptPath=zero-lliurex-luanti-server.zmd
+Using=pkexec
+Service=True
+Locks=zero-lliurex-luanti-server
+Groups=admin;admins;sudo;teachers
