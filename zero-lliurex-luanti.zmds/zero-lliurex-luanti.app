@@ -13,4 +13,4 @@ Category=Software
 ScriptPath=zero-lliurex-luanti.zmd
 Using=pkexec
 Locks=zero-lliurex-luanti
-Groups=admin;admins;sudo;teachers
+Groups=admins;sudo;teachers
