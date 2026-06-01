@@ -2,19 +2,19 @@ Source: zero-lliurex-luanti
 Section: x11
 Priority: optional
 Maintainer: Equipo LliureX <lliurex@gva.es>
-Build-Depends: cdbs, debhelper (>= 10), zero-dev, llxsrchelper,inkscape (>= 0.47),python3-poinstaller
+Build-Depends: debhelper (>= 13), zero-dev, llxsrchelper,inkscape (>= 0.47)
 Standards-Version: 4.1.2
 
 Package: zero-lliurex-luanti
 Architecture: all
-Section: x11
+Section: education
 Depends: zero-center,epi-gtk
 Description: Luanti installer
   Zero-center helper, It installs Luanti voxel game
 
 Package: zero-lliurex-luanti-server
 Architecture: all
-Section: x11
+Section: education
 Depends: zero-center,epi-gtk
 Description: Luanti server installer
   Zero-center helper, It install the server for Luanti
