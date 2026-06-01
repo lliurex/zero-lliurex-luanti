@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+<id>zero.center.luanti</id>
+<metadata_license>CC0-1.0</metadata_license>
+<name>Luanti (Minetes)</name>
+<name xml:lang="ca">Luanti (Minetest)</name>
+<name xml:lang="es">Luanti (Minetest)</name>
+<summary>Open source voxel game engine</summary>
+<summary xml:lang="es">Una plataforma de creación de juegos de vóxeles de código abierto</summary>
+<summary xml:lang="ca">Una plataforma de creació de jocs de vóxels de codi obert</summary>
+<description>
+<p>Luanti allows for the creation, development, and customization of games and modules (shortened to mods) using its Lua scripting system. Games are collections of mods that together establish a complete gameplay experience (by defining major content and behavior), while individual mods serve to modify or complement specific features within games, and may be added, replaced, or removed by players to customize them</p>
+<p xml:lang="es">Luanti se centra principalmente en dos objetivos: ser fácilmente modificable (usando Lua), y poder ejecutarse de forma nativa en equipos tanto nuevos como antiguos. Por esta razón Luanti está implementado en C++ y utiliza el motor gráfico 3D Irrlicht</p>
+<p xml:lang="ca">Luanti s'inspira en Infiniminer, Minecraft i altres jocs de món obert similars i se centra en la construcció creativa d'estructures fetes de blocs amb diferents textures en un món 3D, també conegut com a món-vòxel.</p>
+</description>
+<categories>
+<category>Education</category>
+<category>LliureX</category>
+
+</categories>
+<icon type="stock">luanti</icon>
+<keywords>
+<keyword>minecraft</keyword>
+<keyword>minetest</keyword>
+<keyword>voxel</keyword>
+<keyword>world</keyword>
+<keyword>bedrock</keyword>
+</keywords>
+<keywords xml:lang="ca">
+<keyword>mon</keyword>
+<keyword>voxels</keyword>
+</keywords>
+<keywords xml:lang="es">
+<keyword>mundo</keyword>
+<keyword>voxeles</keyword>
+</keywords>
+</component>
