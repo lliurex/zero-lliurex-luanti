@@ -4,12 +4,23 @@
 ACTION="$1"
 shift
 
+PATCH_DIR="/usr/share/zero-lliurex-luanti"
+INSTALL_DIR="/usr/share/games/minetest/builtin/mainmenu/"
 PACKAGE_LIST=$@
 
 case $ACTION in
+	preInstall)
+		apt install minetest -y
+	;;
 	postInstall)
-		patch /usr/share/games/minetest/builtin/mainmenu/serverlistmgr.lua 01_disable_serverlist-patch
-		patch /usr/share/games/minetest/builtin/mainmenu/tab_local.lua 02_disable_server.patch
+		patch -t -N ${INSTALL_DIR}/serverlistmgr.lua ${PATCH_DIR}/01_disable_serverlist.patch
+		if [[ " ${PACKAGE_LIST[*]} " != *" luanti-server "* ]]; then
+			patch --silent -t -N ${INSTALL_DIR}/tab_local.lua ${PATCH_DIR}/02_disable_server.patch
+		else
+			echo "Enabling server mode"
+		 	patch --silent --dry-run -f  ${INSTALL_DIR}/tab_local.lua ${PATCH_DIR}/02_disable_server.patch || \
+				patch --silent -t  ${INSTALL_DIR}/tab_local.lua ${PATCH_DIR}/02_disable_server.patch
+		fi
 		echo "**** Luanti/Minetest configured ****"
 	;;
 	remove)
