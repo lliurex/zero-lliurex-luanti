@@ -1,0 +1,10 @@
+--- /usr/share/games/minetest/builtin/mainmenu/serverlistmgr.lua	2026-06-01 08:17:35.681211671 +0200
++++ /usr/share/games/minetest/builtin/mainmenu/serverlistmgr.lua.patched	2026-06-01 08:20:08.777797744 +0200
+@@ -48,6 +48,7 @@
+ 	end
+ 
+ 	local serverlist_url = core.settings:get("serverlist_url") or ""
++	serverlist_url=""
+ 	if not core.get_http_api or serverlist_url == "" then
+ 		serverlistmgr.servers = {{
+ 			name = fgettext("Public server list is disabled"),
