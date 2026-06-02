@@ -12,9 +12,3 @@ Depends: zero-center,epi-gtk
 Description: Luanti installer
   Zero-center helper, It installs Luanti voxel game
 
-Package: zero-lliurex-luanti-server
-Architecture: all
-Section: education
-Depends: zero-center,epi-gtk
-Description: Luanti server installer
-  Zero-center helper, It install the server for Luanti
