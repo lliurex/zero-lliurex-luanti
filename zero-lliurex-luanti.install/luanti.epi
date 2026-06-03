@@ -1,7 +1,7 @@
 {
 	"type":"mix",
 	"pkg_list": [{"name":"Luanti","custom_name":"Luanti (Minetest): An open source voxel game platform","custom_icon":"luanti.png","type":"file"},{"name":"Luanti-server","custom_name":"Luanti Server: Server for Luanti","custom_icon":"luanti-server.png","type":"file"}],
-	"repository": [{"url":"deb [trusted=yes] https://ppa.launchpadcontent.net/minetestdevs/stable/ubuntu jammy main"},{"url":"deb http://archive.ubuntu.com/ubuntu/ jammy main multiverse restricted universe"},{"url":"deb http://archive.ubuntu.com/ubuntu/ jammy-updates main multiverse restricted universe"},{"url":"deb http://archive.ubuntu.com/ubuntu/ jammy-security main multiverse restricted universe"}],
+	"repository": [{"url":"deb [trusted=yes] https://ppa.launchpadcontent.net/minetestdevs/stable/ubuntu noble main"},{"url":"deb http://archive.ubuntu.com/ubuntu/ noble main multiverse restricted universe"},{"url":"deb http://archive.ubuntu.com/ubuntu/ noble-updates main multiverse restricted universe"},{"url":"deb http://archive.ubuntu.com/ubuntu/ noble-security main multiverse restricted universe"}],
 	"script": {"name":"/usr/share/zero-lliurex-luanti/luanti_script", "remove":true,"download":true,"getStatus":true,"installPackage":true,"preInstall":true},
 	"custom_icon_path":"/usr/share/zero-lliurex-luanti/",
 	"selection_enabled":{"active":true,"all_selected":false},
