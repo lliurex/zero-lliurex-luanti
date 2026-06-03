@@ -13,13 +13,13 @@ case $ACTION in
 	getStatus)
 		TEST=0
 		if dpkg -s $MINETEST_PKG >/dev/null 2>&1 ;then
-			if [[ " ${PACKAGE_LIST[*]} " == *" Luanti "* ]]; then
+			if [[ " ${PACKAGE_LIST[*]} " == *" luanti "* ]]; then
 				patch --silent --dry-run -f  ${INSTALL_DIR}/tab_local.lua ${PATCH_DIR}/02_disable_server.patch 1>/dev/null 2>&1
 				if [ $? -ne 0 ] ;then
 					TEST=0
 				fi
 			fi
-			if [[ " ${PACKAGE_LIST[*]} " == *" Luanti-server "* ]]; then
+			if [[ " ${PACKAGE_LIST[*]} " == *" luanti-server "* ]]; then
 				patch --silent --dry-run -f  ${INSTALL_DIR}/tab_local.lua ${PATCH_DIR}/02_disable_server.patch 1>/dev/null 2>&1
 				if [ $? -ne 0 ] ;then
 					TEST=1
@@ -34,14 +34,14 @@ case $ACTION in
 	installPackage)
 		dpkg -s $MINETEST_PKG >/dev/null 2>&1 || apt install -y $MINETEST_PKG
 		patch -t -N ${INSTALL_DIR}/serverlistmgr.lua ${PATCH_DIR}/01_disable_serverlist.patch 1>/dev/null 2>&1
-		if [[ " ${PACKAGE_LIST[*]} " != *" Luanti-server "* ]]; then
+		if [[ " ${PACKAGE_LIST[*]} " != *" luanti-server "* ]]; then
 			patch --silent -t -N ${INSTALL_DIR}/tab_local.lua ${PATCH_DIR}/02_disable_server.patch 1>/dev/null 2>&1
 		else
 			echo "Enabling server mode"
 		 	patch --silent --dry-run -f  ${INSTALL_DIR}/tab_local.lua ${PATCH_DIR}/02_disable_server.patch 1>/dev/null 2>&1 || \
 				patch --silent -t  ${INSTALL_DIR}/tab_local.lua ${PATCH_DIR}/02_disable_server.patch 1>/dev/null 2>&1
 		fi
-		echo "**** Luanti/Minetest configured ****"
+		echo "**** luanti/Minetest configured ****"
 	;;
 	remove)
 		apt remove -y $MINETEST_PKG || true
