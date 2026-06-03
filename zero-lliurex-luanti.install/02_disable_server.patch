@@ -1,16 +1,10 @@
---- /usr/share/games/minetest/builtin/mainmenu/tab_local.lua	2026-06-01 08:38:51.951882654 +0200
-+++ /usr/share/games/minetest/builtin/mainmenu/tab_local.lua.patch	2026-06-01 08:38:46.623748151 +0200
-@@ -123,12 +123,12 @@
- 			dump(core.settings:get_bool("creative_mode")) .. "]"..
- 			"checkbox[0,0.25;cb_enable_damage;".. fgettext("Enable Damage") .. ";" ..
- 			dump(core.settings:get_bool("enable_damage")) .. "]"..
--			"checkbox[0,0.7;cb_server;".. fgettext("Host Server") ..";" ..
- 			dump(core.settings:get_bool("enable_server")) .. "]" ..
- 			"textlist[3.9,0.4;7.9,3.45;sp_worlds;" ..
- 			menu_render_worldlist() ..
- 			";" .. index .. "]"
- 
-+	core.settings:set("enable_server","false")
- 	if core.settings:get_bool("enable_server") then
- 		retval = retval ..
- 				"button[7.9,4.75;4.1,1;play;".. fgettext("Host Game") .. "]" ..
+--- tab_local.lua.orig	2026-06-03 09:49:44.568241064 +0200
++++ tab_local.lua	2026-06-03 09:49:11.984186409 +0200
+@@ -198,6 +198,7 @@
+ 				dump(core.settings:get_bool("enable_damage")) .. "]"
+ 			y = y + yo
+ 		end
++		disabled_settings["enable_server"] = true
+ 		if disabled_settings["enable_server"] == nil then
+ 			host = "checkbox[0,"..y..";cb_server;".. fgettext("Host Server") ..";" ..
+ 				dump(core.settings:get_bool("enable_server")) .. "]"
